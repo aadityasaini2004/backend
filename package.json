@@ -1,13 +1,16 @@
 {
   "name": "yt-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "You Tube Backend",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
 }
