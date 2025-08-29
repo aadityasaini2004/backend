@@ -58,7 +58,6 @@ const userSchema = new Schema({
 
 },{timestamps: true});
 
-
 // password encryption middleware
 userSchema.pre("save", async function(next) {
     if(!this.isModified("password")) return next();
@@ -73,7 +72,6 @@ userSchema.methods.isPasswordCorrect = async function(password) {
 }
 
 // Generate Access Token
-
 userSchema.methods.generateAccessToken = function() {
     return jwt.sign({
             _id: this._id,
@@ -89,7 +87,6 @@ userSchema.methods.generateAccessToken = function() {
 }
 
 // Generate Refresh Token
-
 userSchema.methods.generateRefreshToken = function() {
     jwt.sign(
         {
